@@ -12,6 +12,7 @@ q3(Num, Power, Result) :- powerLinear(Num, Power, 1, Result).
 powerLinear(_, Power, TempResult, Result) :- Power == 0, Result is TempResult, !.
 powerLinear(Num, Power, TempResult, Result) :- NewPower is Power - 1, NewResult is TempResult * Num, powerLinear(Num, NewPower, NewResult, Result).
 
-
-
+q5(N, Result) :- sum(N, 1, 1, 1, Result).
+sum(N, X, _, TempResult, Result) :- X == N, Result is TempResult, !.
+sum(N, X, Calc, TempResult, Result) :- NewX is X + 1, NewCalc is Calc * NewX, NewComp is 1 / NewCalc, NewTempResult is TempResult + NewComp, sum(N, NewX, NewCalc, NewTempResult, Result).
 
