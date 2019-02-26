@@ -1,2 +1,2 @@
 # Prolog
-My solutions to Logic Programming with Prolog course homework tasks
+My solutions to Logic Programming course homework tasks
